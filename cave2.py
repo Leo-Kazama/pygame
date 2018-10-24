@@ -18,7 +18,7 @@ def main():
     slope = randint(1,6)
     sysfont = pygame.font.SysFont(None,36)
     ship_image = pygame.image.load(
-        "C:/Users/Kazam/Desktop/Python/pygame/Samples/games/cave/ship.png")
+        "C:/Users/Kazam/Desktop/Python/pygame/Samples/games/cave/syugakuryokou_airplane.png")
     bang_image = pygame.image.load(
         "C:/Users/Kazam/Desktop/Python/pygame/Samples/games/cave/bang.png")
     holes = []
@@ -39,7 +39,7 @@ def main():
         # 自機を移動
         if not game_over:
             score += 10
-            velocity += -3 if is_space_down else 3
+            velocity += -1 if is_space_down else 1
             ship_y += velocity
 
             # 洞窟をスクロール
@@ -56,7 +56,7 @@ def main():
 
             # 衝突？
             if holes[0].top > ship_y or \
-            holes[0].bottom < ship_y + 0.1:
+            holes[0].bottom < ship_y + 80:
                 game_over = True
 
         # 描画
