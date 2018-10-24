@@ -1,4 +1,3 @@
-""" cave - Copyright 2016 Kenichiro Tanaka """
 import sys
 from random import randint
 import pygame
